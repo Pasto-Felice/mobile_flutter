@@ -24,7 +24,7 @@ class Navbar extends StatelessWidget {
             )
           ]),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 45),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

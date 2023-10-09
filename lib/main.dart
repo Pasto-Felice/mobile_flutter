@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
           ),
           textTheme: TextTheme(
             displayLarge: TextStyle(fontWeight: FontWeight.w200, fontSize: 36, fontFamily: GoogleFonts.raleway().fontFamily, color: defaultTextColor),
-            displayMedium: TextStyle(fontWeight: FontWeight.w600, fontSize: 24, color: defaultTextColor),
+            displayMedium: TextStyle(fontWeight: FontWeight.w400, fontSize: 26, color: defaultTextColor, fontFamily: GoogleFonts.raleway().fontFamily ),
+            displaySmall: TextStyle(fontWeight: FontWeight.w600, fontSize: 24, color: defaultTextColor),
             bodyLarge: TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: defaultTextColor),
             bodyMedium: TextStyle(fontWeight: FontWeight.w400, fontSize: 16, color: defaultTextColor),
             labelLarge: TextStyle(fontWeight: FontWeight.w300, fontSize: 16, fontFamily: GoogleFonts.inter().fontFamily, color: defaultTextColor),

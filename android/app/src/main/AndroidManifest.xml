@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="pasto_felice_mobile"
+        android:label="Pasto Felice"
         android:name="${applicationName}"
         android:roundIcon="@mipmap/rounded_logo_scritta"
         android:icon="@mipmap/ic_launcher">
