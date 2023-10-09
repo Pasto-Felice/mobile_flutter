@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pasto_felice_mobile/screens/menuLifespawnPage.dart';
 import 'package:pasto_felice_mobile/widgets/buttons.dart';
+import 'package:pasto_felice_mobile/widgets/colors.dart';
 import 'package:pasto_felice_mobile/widgets/inputFields.dart';
 
 class AllergiesPage extends StatefulWidget {
@@ -71,7 +72,7 @@ class _AllergiesPageState extends State<AllergiesPage> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
                               border:
-                                  Border.all(style: BorderStyle.solid, color: const Color(0xFFE2E8F0))),
+                                  Border.all(style: BorderStyle.solid, color: whites.shade400)),
                           child: const Column(
                             children: [CheckBoxInputField(label: "Allergia")],
                           ),

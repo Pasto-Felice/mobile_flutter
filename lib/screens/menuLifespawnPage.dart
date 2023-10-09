@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pasto_felice_mobile/screens/menuScreen.dart';
 import 'package:pasto_felice_mobile/widgets/buttons.dart';
 import 'package:pasto_felice_mobile/widgets/inputFields.dart';
 
@@ -62,7 +63,9 @@ class _MenuLifespawnPageState extends State<MenuLifespawnPage> {
                         const SizedBox(height: 15),
                         const TextInputField(label: "Eg. 2", password: false),
                         const SizedBox(height: 30),
-                        Button(text: "Salva", callbackFunction: () {})
+                        Button(text: "Salva", callbackFunction: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
+                        })
                       ],
                     ),
                   )),

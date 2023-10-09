@@ -1,6 +1,4 @@
-import 'package:antd_icons/antd_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
 
 class TextInputField extends StatelessWidget {
@@ -32,12 +30,12 @@ class TextInputField extends StatelessWidget {
               labelStyle: Theme.of(context)
                   .textTheme
                   .bodyMedium
-                  ?.copyWith(color: const Color(0xFFA0AEC0)),
+                  ?.copyWith(color: whites.shade500),
               label: Text(label),
               focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: primary.shade400)),
-              enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xFFE2E8F0)))),
+              enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: whites.shade400))),
         ),
       ),
     );
@@ -62,8 +60,7 @@ class DateInputField extends StatelessWidget {
                 alignment: AlignmentDirectional.centerStart,
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
-                    side:
-                        const BorderSide(color: Color(0xFFE2E8F0), width: 1)))),
+                    side: BorderSide(color: whites.shade400, width: 1)))),
             onPressed: () {
               showDatePicker(
                   context: context,
@@ -96,7 +93,7 @@ class SelectInputField extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: const Color(0xFFE2E8F0))),
+                border: Border.all(color: whites.shade400)),
             child: DropdownButton<String>(
               borderRadius: BorderRadius.circular(5),
               dropdownColor: Colors.white,
@@ -153,7 +150,7 @@ class _CheckBoxInputFieldState extends State<CheckBoxInputField> {
                 height: 18,
                 child: Checkbox(
                     value: isChecked,
-                    side: const BorderSide(color: Color(0xFFE2E8F0), width: 2),
+                    side: BorderSide(color: whites.shade400, width: 2),
                     onChanged: (bool? value) {
                       setState(() {
                         isChecked = value!;

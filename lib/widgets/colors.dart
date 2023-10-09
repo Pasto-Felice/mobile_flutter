@@ -43,3 +43,17 @@ const MaterialColor secondaryAccent = MaterialColor(_secondaryAccentValue, <int,
   700: Color(0xFFFFB3A4),
 });
 const int _secondaryAccentValue = 0xFFFFF3F1;
+
+const MaterialColor blacks = MaterialColor(_primaryBlacksValue, <int, Color>{
+  300: Color(0xFF454545),
+  400: Color(_primaryBlacksValue),
+  500: Color(0xFF21201F),
+});
+const int _primaryBlacksValue = 0xFF373635;
+
+const MaterialColor whites = MaterialColor(_primaryWhitesValue, <int, Color>{
+  300: Color(0xFFFFFFFF),
+  400: Color(_primaryWhitesValue),
+  500: Color(0xFFA0AEC0),
+});
+const int _primaryWhitesValue = 0xFFE2E8F0;

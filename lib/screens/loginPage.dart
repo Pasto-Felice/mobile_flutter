@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pasto_felice_mobile/screens/menuScreen.dart';
 import 'package:pasto_felice_mobile/widgets/buttons.dart';
 import 'package:pasto_felice_mobile/widgets/inputFields.dart';
 
@@ -50,7 +51,9 @@ class _LoginPageState extends State<LoginPage> {
                         const SizedBox(height: 5),
                         const CheckBoxInputField(label: "Ricordami"),
                         const SizedBox(height: 30),
-                        Button(text: "Invia", callbackFunction: (){})
+                        Button(text: "Invia", callbackFunction: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
+                        })
                       ],
                     ),
                   )),
