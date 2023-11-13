@@ -18,7 +18,7 @@ class _ListScreenState extends State<ListScreen> {
       key: _key,
       body: Column(
         children: [
-          const SizedBox(height: 75),
+          const SizedBox(height: 50),
           Expanded(
               child: Column(children: [
             Padding(
