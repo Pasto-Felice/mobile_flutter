@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
 
 class ScreenTitle extends StatelessWidget {
-  const ScreenTitle({super.key});
+  final drawerKey;
+  final title;
+  const ScreenTitle({super.key, required this.drawerKey, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +13,12 @@ class ScreenTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "MENU",
+          title,
           style: Theme.of(context).textTheme.displayLarge,
         ),
         Container(
+          width: 30,
+            height: 30,
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(
                 color: whites.shade300,
@@ -34,11 +38,15 @@ class ScreenTitle extends StatelessWidget {
                       secondary.shade500,
                       primary.shade500
                     ])),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: AntdIcons.outlined.user
-                  .svg(height: 24, color: whites.shade300),
-            ))
+            child: IconButton(
+              padding: EdgeInsets.zero,
+                icon: AntdIcons.outlined.user
+                    .svg(height: 24, color: whites.shade300),
+                onPressed: () {
+                  drawerKey.currentState!.openEndDrawer();
+                },
+              )
+            )
       ],
     );
   }

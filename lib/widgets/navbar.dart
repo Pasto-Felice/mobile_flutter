@@ -1,8 +1,7 @@
-import 'package:antd_icons/antd_icons.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:pasto_felice_mobile/screens/listScreen.dart';
+import 'package:pasto_felice_mobile/screens/menuScreen.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
 
 class Navbar extends StatelessWidget {
@@ -29,10 +28,21 @@ class Navbar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(
-                Boxicons.bx_food_menu,
-                color: primary.shade500,
-                size: 25,
+              SizedBox(
+                height: 25,
+                width: 25,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  alignment: Alignment.center,
+                  iconSize: 25,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
+                  },
+                  icon: Icon(
+                    Ionicons.reader_sharp,
+                    color: primary.shade500,
+                  ),
+                ),
               ),
               Text(
                 "Menù",
@@ -40,31 +50,61 @@ class Navbar extends StatelessWidget {
               )
             ]),
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                AntdIcons.outlined.calendar.svg(
+              SizedBox(
+                height: 25,
+                width: 25,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  alignment: Alignment.center,
+                  iconSize: 25,
+                  onPressed: () {},
+                  icon: Icon(
+                    Ionicons.calendar_clear_sharp,
                     color: primary.shade500,
-                    height: 25
+                  ),
                 ),
+              ),
               Text(
                 "Calendario",
                 style: Theme.of(context).textTheme.labelSmall,
               )
             ]),
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(
-                FeatherIcons.settings,
-                color: primary.shade500,
-                size: 25,
+              SizedBox(
+                height: 25,
+                width: 25,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  alignment: Alignment.center,
+                  iconSize: 25,
+                  onPressed: () {},
+                  icon: Icon(
+                    Ionicons.stats_chart_sharp,
+                    color: primary.shade500,
+                  ),
+                ),
               ),
               Text(
-                "Opzioni",
+                "Statistiche",
                 style: Theme.of(context).textTheme.labelSmall,
               )
             ]),
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(
-                Ionicons.list_sharp,
-                color: primary.shade500,
-                size: 25,
+              SizedBox(
+                height: 25,
+                width: 25,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  alignment: Alignment.center,
+                  iconSize: 25,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                  },
+                  icon: Icon(
+                    Ionicons.list_sharp,
+                    color: primary.shade500,
+                  ),
+                ),
               ),
               Text(
                 "Lista",
