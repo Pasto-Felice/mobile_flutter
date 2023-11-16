@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pasto_felice_mobile/api/loginRequestes.dart';
+import 'package:pasto_felice_mobile/parsing/allergens.dart';
 import 'package:pasto_felice_mobile/screens/menuLifespawnPage.dart';
 import 'package:pasto_felice_mobile/widgets/buttons.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
@@ -17,7 +19,6 @@ class _AllergiesPageState extends State<AllergiesPage> {
   String sex = '';
   String preferredSex = '';
   DateTime birthDate = DateTime(2023);
-  List<int> allergens = [];
   Map data = {
     "email": "",
     "password": "",
@@ -73,8 +74,17 @@ class _AllergiesPageState extends State<AllergiesPage> {
                               borderRadius: BorderRadius.circular(5),
                               border:
                                   Border.all(style: BorderStyle.solid, color: whites.shade400)),
-                          child: const Column(
-                            children: [CheckBoxInputField(label: "Allergia")],
+                          child: FutureBuilder<List<Allergens>>(
+                            future: fetchAllergens(),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                return AllergensList(allergens: snapshot.data!);
+                              } else if (snapshot.hasError) {
+                                return Text('${snapshot.error}');
+                              }
+                              // By default, show a loading spinner.
+                              return const CircularProgressIndicator();
+                            },
                           ),
                         ),
                         const SizedBox(height: 30),
@@ -93,6 +103,26 @@ class _AllergiesPageState extends State<AllergiesPage> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class AllergensList extends StatelessWidget {
+  const AllergensList({super.key, required this.allergens});
+
+  final List<Allergens> allergens;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 1,
+        mainAxisExtent: 30
+      ),
+      itemCount: allergens.length,
+      itemBuilder: (context, index) {
+        return CheckBoxInputField(label: allergens[index].name);
+      },
     );
   }
 }
