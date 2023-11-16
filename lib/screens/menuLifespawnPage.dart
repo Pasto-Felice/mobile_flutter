@@ -32,48 +32,51 @@ class _MenuLifespawnPageState extends State<MenuLifespawnPage> {
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(
-              width: 250,
-              height: 250,
-              child: Hero(
-                tag: "logo",
-                child: Image(
-                  image: AssetImage("assets/logo_scritta.png"),
-                  fit: BoxFit.fitWidth,
-                ),
-              )),
-          Expanded(
-            child: SizedBox(
-                width: 290,
-                child: Form(
-                  key: formKey,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        "Ogni quante settimane vuoi cambiare il menu?",
-                        style: Theme.of(context).textTheme.displayMedium,
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 15),
-                      const TextInputField(label: "Eg. 2", password: false),
-                      const SizedBox(height: 30),
-                      Button(text: "Salva", callbackFunction: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
-                      })
-                    ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(
+                width: 250,
+                height: 250,
+                child: Hero(
+                  tag: "logo",
+                  child: Image(
+                    image: AssetImage("assets/logo_scritta.png"),
+                    fit: BoxFit.fitWidth,
                   ),
                 )),
-          ),
-          CustomTextButton(
-              text: "Torna indietro",
-              callbackFunction: () {
-                Navigator.pop(context);
-              })
-        ],
+            Expanded(
+              child: SizedBox(
+                  width: 290,
+                  child: Form(
+                    key: formKey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          "Ogni quante settimane vuoi cambiare il menu?",
+                          style: Theme.of(context).textTheme.displayMedium,
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 15),
+                        const TextInputField(label: "Eg. 2", password: false),
+                        const SizedBox(height: 30),
+                        Button(text: "Salva", callbackFunction: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
+                        })
+                      ],
+                    ),
+                  )),
+            ),
+            CustomTextButton(
+                text: "Torna indietro",
+                callbackFunction: () {
+                  Navigator.pop(context);
+                })
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pasto_felice_mobile/widgets/boxShadow.dart';
 import 'colors.dart';
 
 class ScrollSelection extends StatefulWidget {
@@ -38,14 +39,7 @@ class _ScrollSelectionState extends State<ScrollSelection> {
         decoration: BoxDecoration(
             color: whites.shade300,
             borderRadius: BorderRadius.circular(5),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.25),
-                spreadRadius: 5,
-                blurRadius: 30,
-                offset: const Offset(0, 4),
-              )
-            ]),
+            boxShadow: [CustomShadow.primaryShadow]),
         child: PageView.builder(
             controller: _pageController,
             scrollDirection: Axis.horizontal,

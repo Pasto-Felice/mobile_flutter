@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pasto_felice_mobile/widgets/boxShadow.dart';
 import 'colors.dart';
 class CircularImg extends StatelessWidget {
   const CircularImg({super.key});
@@ -15,14 +16,7 @@ class CircularImg extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         borderRadius: BorderRadius.circular(150.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.15),
-            spreadRadius: 5,
-            blurRadius: 20,
-            offset: const Offset(0, 4),
-          )
-        ],
+        boxShadow: [CustomShadow.primaryShadow],
         border: Border.all(
           color: whites.shade300,
           width: 4.0,

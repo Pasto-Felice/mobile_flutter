@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:pasto_felice_mobile/screens/listScreen.dart';
 import 'package:pasto_felice_mobile/screens/menuScreen.dart';
+import 'package:pasto_felice_mobile/widgets/boxShadow.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
 
 class Navbar extends StatelessWidget {
@@ -14,14 +15,7 @@ class Navbar extends StatelessWidget {
       decoration: BoxDecoration(
           color: whites.shade300,
           borderRadius: const BorderRadius.vertical(top: Radius.circular(5)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              spreadRadius: 5,
-              blurRadius: 30,
-              offset: const Offset(0, 4),
-            )
-          ]),
+          boxShadow: [CustomShadow.primaryShadow]),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Row(

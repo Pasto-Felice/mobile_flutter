@@ -68,29 +68,45 @@ class _AllergiesPageState extends State<AllergiesPage> {
                         ),
                         const SizedBox(height: 15),
                         Container(
-                          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 4, horizontal: 8),
+                          width: double.infinity,
                           height: 300,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(style: BorderStyle.solid, color: whites.shade400)),
+                              border: Border.all(
+                                  style: BorderStyle.solid,
+                                  color: whites.shade400)),
                           child: FutureBuilder<List<Allergens>>(
                             future: fetchAllergens(),
                             builder: (context, snapshot) {
+                              // By default, show a loading spinner.
                               if (snapshot.hasData) {
                                 return AllergensList(allergens: snapshot.data!);
                               } else if (snapshot.hasError) {
                                 return Text('${snapshot.error}');
                               }
-                              // By default, show a loading spinner.
-                              return const CircularProgressIndicator();
+                              return SizedBox(
+                                width: 36,
+                                height: 36,
+                                child: Center(
+                                    child: CircularProgressIndicator(
+                                  color: secondary.shade500,
+                                )),
+                              );
                             },
                           ),
                         ),
                         const SizedBox(height: 30),
-                        Button(text: "Salva", callbackFunction: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuLifespawnPage()));
-                        })
+                        Button(
+                            text: "Salva",
+                            callbackFunction: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MenuLifespawnPage()));
+                            })
                       ],
                     ),
                   )),
@@ -116,9 +132,7 @@ class AllergensList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 1,
-        mainAxisExtent: 30
-      ),
+          crossAxisCount: 1, mainAxisExtent: 30),
       itemCount: allergens.length,
       itemBuilder: (context, index) {
         return CheckBoxInputField(label: allergens[index].name);
