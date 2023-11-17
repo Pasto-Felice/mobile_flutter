@@ -1,6 +1,6 @@
 import 'package:antd_icons/antd_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:pasto_felice_mobile/widgets/CircularImg.dart';
+import 'package:pasto_felice_mobile/widgets/circularImg.dart';
 import 'package:pasto_felice_mobile/widgets/boxShadow.dart';
 import 'package:pasto_felice_mobile/widgets/buttons.dart';
 import 'package:pasto_felice_mobile/widgets/colors.dart';
@@ -22,8 +22,8 @@ class _MenuScreenState extends State<MenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _key,
-      body: Column(
+        key: _key,
+        body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 50),
@@ -31,7 +31,10 @@ class _MenuScreenState extends State<MenuScreen> {
                 child: Column(children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                child: ScreenTitle(drawerKey: _key, title: "MENU",),
+                child: ScreenTitle(
+                  drawerKey: _key,
+                  title: "MENU",
+                ),
               ),
               const SizedBox(height: 25),
               const Padding(
@@ -158,7 +161,6 @@ class _MenuScreenState extends State<MenuScreen> {
             const Navbar()
           ],
         ),
-      endDrawer: const DrawerCustom()
-    );
+        endDrawer: const DrawerCustom());
   }
 }
