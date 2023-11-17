@@ -30,7 +30,10 @@ class Navbar extends StatelessWidget {
                   alignment: Alignment.center,
                   iconSize: 25,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MenuScreen()));
                   },
                   icon: Icon(
                     Ionicons.reader_sharp,
@@ -92,7 +95,10 @@ class Navbar extends StatelessWidget {
                   alignment: Alignment.center,
                   iconSize: 25,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ListScreen()));
                   },
                   icon: Icon(
                     Ionicons.list_sharp,

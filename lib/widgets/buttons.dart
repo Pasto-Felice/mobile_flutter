@@ -8,7 +8,11 @@ class OutlineActionButton extends StatelessWidget {
   final String text;
   final SvgGenImage icon;
   final void Function() callbackFunction;
-  const OutlineActionButton({super.key, required this.text, required this.icon, required this.callbackFunction});
+  const OutlineActionButton(
+      {super.key,
+      required this.text,
+      required this.icon,
+      required this.callbackFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +53,11 @@ class ActionButton extends StatelessWidget {
   final String text;
   final SvgGenImage icon;
   final void Function() callbackFunction;
-  const ActionButton({super.key, required this.text, required this.icon, required this.callbackFunction});
+  const ActionButton(
+      {super.key,
+      required this.text,
+      required this.icon,
+      required this.callbackFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -121,18 +129,16 @@ class Button extends StatelessWidget {
 class CustomTextButton extends StatelessWidget {
   final String text;
   final void Function() callbackFunction;
-  const CustomTextButton({super.key, required this.text, required this.callbackFunction});
+  const CustomTextButton(
+      {super.key, required this.text, required this.callbackFunction});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: callbackFunction,
         style: ButtonStyle(
-          shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5))
-          )
-        ),
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5)))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,

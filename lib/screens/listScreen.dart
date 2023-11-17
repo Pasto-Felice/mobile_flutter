@@ -24,116 +24,127 @@ class _ListScreenState extends State<ListScreen> {
           const SizedBox(height: 50),
           Expanded(
               child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                  child: ScreenTitle(
-                    drawerKey: _key,
-                    title: "LISTA",
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
+              child: ScreenTitle(
+                drawerKey: _key,
+                title: "LISTA",
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  const SizedBox(
+                    height: 20,
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-
-                    children: [
-                      const SizedBox(height: 20,),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(children: [Text("DA COMPRARE", style: Theme
-                            .of(context)
-                            .textTheme
-                            .displayMedium,)
-                        ]),
-                      ),
-                      const SizedBox(height: 25),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          boxShadow: [CustomShadow.primaryShadow],
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                decoration: BoxDecoration(
-                                  border: Border(
-                                    bottom: BorderSide(width: 1, color: blacks.shade300)
-                                  )
-                                ),
-                                child: const Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [Text("Nome"), Text("Quantità")],
-                                ),
-                              ),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Uova", quantity: "3 uova"),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Latte", quantity: "2 bottiglie"),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Pesce spada", quantity: "250g")
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 35,),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(children: [Text("COMPRATI", style: Theme
-                            .of(context)
-                            .textTheme
-                            .displayMedium,)
-                        ]),
-                      ),
-                      const SizedBox(height: 25),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          boxShadow: [CustomShadow.primaryShadow],
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(width: 1, color: blacks.shade300)
-                                    )
-                                ),
-                                child: const Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [Text("Nome"), Text("Quantità")],
-                                ),
-                              ),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Uova", quantity: "3 uova"),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Latte", quantity: "2 bottiglie"),
-                              const SizedBox(height: 10),
-                              const ListItemToBuy(label: "Pesce spada", quantity: "250g")
-                            ],
-                          ),
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(children: [
+                      Text(
+                        "DA COMPRARE",
+                        style: Theme.of(context).textTheme.displayMedium,
                       )
-                    ],
+                    ]),
                   ),
-                )
-              ])),
+                  const SizedBox(height: 25),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [CustomShadow.primaryShadow],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                                        width: 1, color: blacks.shade300))),
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [Text("Nome"), Text("Quantità")],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Uova", quantity: "3 uova"),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Latte", quantity: "2 bottiglie"),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Pesce spada", quantity: "250g")
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 35,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(children: [
+                      Text(
+                        "COMPRATI",
+                        style: Theme.of(context).textTheme.displayMedium,
+                      )
+                    ]),
+                  ),
+                  const SizedBox(height: 25),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [CustomShadow.primaryShadow],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                                        width: 1, color: blacks.shade300))),
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [Text("Nome"), Text("Quantità")],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Uova", quantity: "3 uova"),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Latte", quantity: "2 bottiglie"),
+                          const SizedBox(height: 10),
+                          const ListItemToBuy(
+                              label: "Pesce spada", quantity: "250g")
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ])),
           const Navbar()
         ],
       ),
@@ -156,20 +167,21 @@ class ListItemToBuy extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Icon(Icons.radio_button_off, color: primary.shade600,),
-                const SizedBox(width: 5,),
+                Icon(
+                  Icons.radio_button_off,
+                  color: primary.shade600,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
                 Text(label)
               ],
             ),
             Row(
               mainAxisSize: MainAxisSize.max,
-              children: [
-                Text(quantity)
-              ],
+              children: [Text(quantity)],
             )
           ],
-        )
-    );
+        ));
   }
 }
-

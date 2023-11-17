@@ -11,7 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   String email = '';
   String password = '';
   Map data = {"email": "", "password": ""};
@@ -43,24 +42,41 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Text("Inserisci le credenziali", style: Theme.of(context).textTheme.displayMedium,),
+                        Text(
+                          "Inserisci le credenziali",
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
                         const SizedBox(height: 30),
-                        const TextInputField(label: "E-mail", password: false,),
+                        const TextInputField(
+                          label: "E-mail",
+                          password: false,
+                        ),
                         const SizedBox(height: 15),
-                        const TextInputField(label: "Password", password: true,),
+                        const TextInputField(
+                          label: "Password",
+                          password: true,
+                        ),
                         const SizedBox(height: 5),
                         const CheckBoxInputField(label: "Ricordami"),
                         const SizedBox(height: 30),
-                        Button(text: "Invia", callbackFunction: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
-                        })
+                        Button(
+                            text: "Invia",
+                            callbackFunction: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MenuScreen()));
+                            })
                       ],
                     ),
                   )),
             ),
-            CustomTextButton(text: "Torna indietro", callbackFunction: (){
-              Navigator.pop(context);
-            })
+            CustomTextButton(
+                text: "Torna indietro",
+                callbackFunction: () {
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),

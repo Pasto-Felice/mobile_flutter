@@ -18,7 +18,7 @@ class ScreenTitle extends StatelessWidget {
           style: Theme.of(context).textTheme.displayLarge,
         ),
         Container(
-          width: 30,
+            width: 30,
             height: 30,
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(
@@ -28,21 +28,16 @@ class ScreenTitle extends StatelessWidget {
                 gradient: LinearGradient(
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
-                    colors: [
-                      secondary.shade500,
-                      primary.shade500
-                    ])),
+                    colors: [secondary.shade500, primary.shade500])),
             child: IconButton(
               padding: EdgeInsets.zero,
-                icon: AntdIcons.outlined.user
-                    .svg(height: 24, color: whites.shade300),
-                onPressed: () {
-                  drawerKey.currentState!.openEndDrawer();
-                },
-              )
-            )
+              icon: AntdIcons.outlined.user
+                  .svg(height: 24, color: whites.shade300),
+              onPressed: () {
+                drawerKey.currentState!.openEndDrawer();
+              },
+            ))
       ],
     );
   }
 }
-

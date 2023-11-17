@@ -45,22 +45,40 @@ class _RegisterPage extends State<RegisterPage> {
                         Text("Inserisci le credenziali",
                             style: Theme.of(context).textTheme.displayMedium),
                         const SizedBox(height: 30),
-                        const TextInputField(label: "E-mail", password: false,),
+                        const TextInputField(
+                          label: "E-mail",
+                          password: false,
+                        ),
                         const SizedBox(height: 15),
-                        const TextInputField(label: "Password", password: true,),
+                        const TextInputField(
+                          label: "Password",
+                          password: true,
+                        ),
                         const SizedBox(height: 15),
-                        const TextInputField(label: "Coferma password", password: true,),
+                        const TextInputField(
+                          label: "Coferma password",
+                          password: true,
+                        ),
                         const SizedBox(height: 30),
-                        Button(text: "Invia", callbackFunction: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const UserDataPage()));
-                        },)
+                        Button(
+                          text: "Invia",
+                          callbackFunction: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const UserDataPage()));
+                          },
+                        )
                       ],
                     ),
                   )),
             ),
-            CustomTextButton(text: "Torna indietro", callbackFunction: (){
-              Navigator.pop(context);
-            })
+            CustomTextButton(
+                text: "Torna indietro",
+                callbackFunction: () {
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),

@@ -63,9 +63,15 @@ class _MenuLifespawnPageState extends State<MenuLifespawnPage> {
                         const SizedBox(height: 15),
                         const TextInputField(label: "Eg. 2", password: false),
                         const SizedBox(height: 30),
-                        Button(text: "Salva", callbackFunction: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuScreen()));
-                        })
+                        Button(
+                            text: "Salva",
+                            callbackFunction: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MenuScreen()));
+                            })
                       ],
                     ),
                   )),

@@ -14,7 +14,8 @@ const MaterialColor primary = MaterialColor(_primaryPrimaryValue, <int, Color>{
 });
 const int _primaryPrimaryValue = 0xFFFFAF2E;
 
-const MaterialColor primaryAccent = MaterialColor(_primaryAccentValue, <int, Color>{
+const MaterialColor primaryAccent =
+    MaterialColor(_primaryAccentValue, <int, Color>{
   100: Color(0xFFFFFFFF),
   200: Color(_primaryAccentValue),
   400: Color(0xFFFFE0C6),
@@ -22,7 +23,8 @@ const MaterialColor primaryAccent = MaterialColor(_primaryAccentValue, <int, Col
 });
 const int _primaryAccentValue = 0xFFFFFCF9;
 
-const MaterialColor secondary = MaterialColor(_secondaryPrimaryValue, <int, Color>{
+const MaterialColor secondary =
+    MaterialColor(_secondaryPrimaryValue, <int, Color>{
   50: Color(0xFFFEEFE9),
   100: Color(0xFFFCD6C7),
   200: Color(0xFFFABBA2),
@@ -36,7 +38,8 @@ const MaterialColor secondary = MaterialColor(_secondaryPrimaryValue, <int, Colo
 });
 const int _secondaryPrimaryValue = 0xFFF57644;
 
-const MaterialColor secondaryAccent = MaterialColor(_secondaryAccentValue, <int, Color>{
+const MaterialColor secondaryAccent =
+    MaterialColor(_secondaryAccentValue, <int, Color>{
   100: Color(0xFFFFFFFF),
   200: Color(_secondaryAccentValue),
   400: Color(0xFFFFC8BE),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pasto_felice_mobile/screens/startPage.dart';
 import 'colors.dart';
 import 'package:antd_icons/antd_icons.dart';
+
 class DrawerCustom extends StatelessWidget {
   const DrawerCustom({super.key});
 
@@ -48,9 +49,10 @@ class DrawerCustom extends StatelessWidget {
             contentPadding: const EdgeInsets.symmetric(horizontal: 25),
             leading: const Icon(Icons.logout),
             title:
-            Text("Logout", style: Theme.of(context).textTheme.bodyMedium),
+                Text("Logout", style: Theme.of(context).textTheme.bodyMedium),
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const StartPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const StartPage()));
             },
           )
         ],

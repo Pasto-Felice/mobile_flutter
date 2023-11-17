@@ -11,7 +11,6 @@ class UserDataPage extends StatefulWidget {
 }
 
 class _UserDataPageState extends State<UserDataPage> {
-
   String name = '';
   int height = 0;
   String sex = '';
@@ -56,24 +55,43 @@ class _UserDataPageState extends State<UserDataPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Text("Inserisci i tuoi dati", style: Theme.of(context).textTheme.displayMedium,),
+                        Text(
+                          "Inserisci i tuoi dati",
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
                         const SizedBox(height: 30),
                         Row(
                           children: [
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Nome", style: Theme.of(context).textTheme.labelMedium,),
+                                Text(
+                                  "Nome",
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ),
                                 const SizedBox(height: 10),
-                                const TextInputField(label: "Eg. Luigi", password: false, width: 188,),
+                                const TextInputField(
+                                  label: "Eg. Luigi",
+                                  password: false,
+                                  width: 188,
+                                ),
                               ],
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Altezza (cm)", style: Theme.of(context).textTheme.labelMedium,),
+                                Text(
+                                  "Altezza (cm)",
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ),
                                 const SizedBox(height: 10),
-                                const TextInputField(label: "160", password: false, width: 102,),
+                                const TextInputField(
+                                  label: "160",
+                                  password: false,
+                                  width: 102,
+                                ),
                               ],
                             )
                           ],
@@ -85,17 +103,30 @@ class _UserDataPageState extends State<UserDataPage> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Sesso", style: Theme.of(context).textTheme.labelMedium,),
+                                Text(
+                                  "Sesso",
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ),
                                 const SizedBox(height: 10),
-                                const SelectInputField(width: 128, items: ["M", "F"],),
+                                const SelectInputField(
+                                  width: 128,
+                                  items: ["M", "F"],
+                                ),
                               ],
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Genere", style: Theme.of(context).textTheme.labelMedium,),
+                                Text(
+                                  "Genere",
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ),
                                 const SizedBox(height: 10),
-                                const SelectInputField(width: 128, items: ["Uomo", "Donna", "Altro"]),
+                                const SelectInputField(
+                                    width: 128,
+                                    items: ["Uomo", "Donna", "Altro"]),
                               ],
                             )
                           ],
@@ -106,9 +137,15 @@ class _UserDataPageState extends State<UserDataPage> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Data di nascita", style: Theme.of(context).textTheme.labelMedium,),
+                                Text(
+                                  "Data di nascita",
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ),
                                 const SizedBox(height: 10),
-                                const DateInputField(width: 290,),
+                                const DateInputField(
+                                  width: 290,
+                                ),
                               ],
                             ),
                           ],
@@ -120,16 +157,24 @@ class _UserDataPageState extends State<UserDataPage> {
                           ],
                         ),
                         const SizedBox(height: 30),
-                        Button(text: "Avanti", callbackFunction: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const AllergiesPage()));
-                        })
+                        Button(
+                            text: "Avanti",
+                            callbackFunction: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const AllergiesPage()));
+                            })
                       ],
                     ),
                   )),
             ),
-            CustomTextButton(text: "Torna indietro", callbackFunction: (){
-              Navigator.pop(context);
-            })
+            CustomTextButton(
+                text: "Torna indietro",
+                callbackFunction: () {
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),
